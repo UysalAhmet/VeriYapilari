@@ -65,12 +65,17 @@ public class BinaryTree {
             if (root.getLeft() == null && root.getRight() == null) {
                 return null;
             } else if (root.getLeft() != null && root.getRight() != null) {
+//                Node tmp = findMin(root.getRight());
+//                root.setRight(deleteRecursive(root.getRight(), tmp));
+//                System.out.println("root :"+root.getRight().getData());
+//                tmp.setLeft(root.getLeft());
+//                tmp.setRight(root.getRight());
+//                root = tmp;
                 Node tmp = findMin(root.getRight());
-                root.setRight(deleteRecursive(root.getRight(), tmp));
+                deleteRecursive(root.getRight(),tmp);
                 tmp.setLeft(root.getLeft());
                 tmp.setRight(root.getRight());
-                root = tmp;
-                
+                root=tmp;
 
                 return root;
             }
