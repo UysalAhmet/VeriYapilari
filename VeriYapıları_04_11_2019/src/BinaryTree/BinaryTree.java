@@ -54,7 +54,7 @@ public class BinaryTree {
     }
 
     public Node delete(Node instance) {
-        return deleteRecursive(root, instance);
+        return root=deleteRecursive(root, instance);
     }
 
     private Node deleteRecursive(Node root, Node instance) {
